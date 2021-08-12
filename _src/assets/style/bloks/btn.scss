@@ -1,0 +1,10 @@
+.btn {
+   &:hover,
+   &:focus {
+      transition: $transitionFast;
+   }
+   @media (max-width: $max1920) {
+   }
+   @media (max-width: $max768) {
+   }
+}

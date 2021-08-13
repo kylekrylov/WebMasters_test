@@ -7,6 +7,18 @@
    padding-right: 8px;
    padding-top: 24px;
    background: $white;
+   .main-min & {
+      max-width: 88px;
+      min-width: 88px;
+      & .menu {
+         &__logo-text {
+            display: none;
+         }
+         &__text {
+            display: none;
+         }
+      }
+   }
    &__burger {
       width: 24px;
       height: 24px;
@@ -35,6 +47,9 @@
       }
    }
    &__logo-text {
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
    }
    &__list {
    }

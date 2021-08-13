@@ -1,0 +1,81 @@
+.menu {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: 180px;
+   padding-right: 8px;
+   padding-top: 24px;
+   background: $white;
+   &__burger {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 16px;
+      margin-left: 32px;
+      position: relative;
+   }
+   &__logo {
+      display: flex;
+      align-items: center;
+      padding-left: 32px;
+      margin-bottom: 24px;
+      cursor: pointer;
+      .logo {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         max-height: 24px;
+         max-width: 24px;
+         padding-top: 2px;
+         margin-right: 8px;
+         svg {
+            overflow: initial;
+         }
+      }
+   }
+   &__logo-text {
+   }
+   &__list {
+   }
+   &__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      min-height: 32px;
+      padding-left: 32px;
+      border-radius: 0px 8px 8px 0px;
+      cursor: pointer;
+      &.active,
+      &:hover,
+      &:focus,
+      &:active {
+         &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #0085ff;
+         }
+      }
+      &.active {
+         background: #f9f9fb;
+      }
+      &:not(:last-child) {
+         margin-bottom: 16px;
+      }
+   }
+   &__icon {
+      margin-right: 8px;
+   }
+   &__text {
+      font-size: 16px;
+      line-height: 19/16 * 100%;
+   }
+}
+.logo {
+   max-width: 24px;
+}

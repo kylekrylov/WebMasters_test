@@ -11,9 +11,11 @@ $sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "N
    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $helvetica: Helvetica, Arial, Lucida, sans-serif;
 
-$fontFamilyActiv: FuturaPT-Book;
-$fontFamilyActivMedium: FuturaPT-Medium;
-$fontFamilyActivBold: FuturaPT-Bold;
+$fontFamilyActiv: Raleway-Regular;
+$fontFamilyActivMedium: Raleway-Medium;
+$fontFamilyActivBold: Raleway-Bold;
+$fontFamilyActivExtraBold: Raleway-ExtraBold;
+$fontFamilyActivBlack: Raleway-Black;
 
 $white: #ffffff;
 $whiteLight: #f2f2f2;
@@ -27,8 +29,8 @@ $blue: #2f80ed;
 $blueLight: #8ecae4;
 $pink: #7b61ff;
 
-$colorActiv: #4cc7e9;
-$colorActiv1: #0c0c0c;
+$colorActiv: #ffb800;
+$colorActiv1: #ffe600;
 $colorActiv2: #242424;
 
 $transition: all 0.2s ease-in-out;
@@ -37,26 +39,26 @@ $transitionLate: all 0.3s ease-in-out 0.1s;
 
 * {
    &::selection {
-      color: $white;
-      background: $pultBlue;
+      color: #0085ff;
+      background: #f9f9fb;
    }
    //*scrollbar chrome
    &::-webkit-scrollbar {
       width: 8px;
-      background-color: $colorActiv1;
+      background-color: #0c0c0c;
       &-track {
          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
          border-radius: 4px;
-         background-color: $colorActiv1;
+         background-color: #0c0c0c;
       }
       &-thumb {
          border-radius: 4px;
-         background-color: $white;
+         background-color: $colorActiv;
       }
    }
 
    //*scrollbar firefox
-   scrollbar-color: $white $colorActiv1;
+   scrollbar-color: $colorActiv $white;
    scrollbar-width: thin;
 }
 
@@ -79,6 +81,12 @@ $transitionLate: all 0.3s ease-in-out 0.1s;
 }
 .bold {
    font-family: $fontFamilyActivBold, $sans;
+}
+.ebold {
+   font-family: $fontFamilyActivExtraBold, $sans;
+}
+.black {
+   font-family: $fontFamilyActivBlack, $sans;
 }
 .text {
    position: relative;
@@ -148,10 +156,9 @@ $transitionLate: all 0.3s ease-in-out 0.1s;
 }
 
 .main {
-   height: 100%;
-   flex: 1 1;
 }
-
+.logo {
+}
 .link {
    color: inherit;
    white-space: nowrap;
